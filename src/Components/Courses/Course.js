@@ -1,24 +1,24 @@
 import React from 'react';
 import './course.css'
-
+import { Button } from 'react-bootstrap';
 const Course = (props) => {
     
-    const { name, price } = props.singleCourse;
-    return (
-            
-        <div className="col-md-4 ">
-            <div className="card-wrapper">
-                <div className="card" style={{width: '15rem'}}>
-                    <img src={require('../../images/books.jpg')} className="card-img-top" alt="..." />
-                    <div className="card-body">
-                    <h5 className="card-title">Title: {name}</h5>
-                    <p className="card-text">Price: {price}</p>
-                    <a href="/#" className="btn btn-primary" onClick={() => props.enrollCourse(props.singleCourse)}>Enroll Now</a>
-                    </div>
-                </div>
+    const { name, price, img } = props.singleCourse;
+    return (            
+
+        <div className="course-wrapper">
+            <div className="course-thumbnail">
+                <img className="course-img" src={require(`../../images/${img}`)} alt="Books"/>
+            </div>
+            <div className="course-info">
+                <h4 className="course-title">{name}</h4>
+                <p className="course-description">Random info</p>
+                <p className="course-price">Price: ${price}</p>
+                <Button variant="primary" onClick={() => props.enrollCourse(props.singleCourse)}>Enroll Now</Button>
             </div>
         </div>
+
     );
 };
 
-export default Course;
+export default Course; 

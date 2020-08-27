@@ -1,3 +1,13 @@
-.card-wrapper {
+.course-wrapper {
     margin-bottom: 20px;
+    height: 400px;
+    /* border: 1px solid red; */
+    padding: 5px;
+    box-shadow: 1px 1px 4px 2px grey;
+    border-radius: 12px
+}
+
+.course-img {
+    max-width: 100%;
+    height: 180px;
 }
